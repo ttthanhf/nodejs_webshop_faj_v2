@@ -8,7 +8,6 @@ module.exports = function (app) {
     app.use('/staff', AuthMiddleware.staffRequired, route.staffRoute);
     app.use('/api', route.apiRoute);
 
-    app.use('/', route.productsRoute);
     app.use('/', route.authRoute);
     app.use('/', route.indexRoute);
     app.use('/', AuthMiddleware.loginRequired, route.cartRoute);

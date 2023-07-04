@@ -3,6 +3,12 @@ class IndexController {
     getIndexPage(req, res) {
         res.render('./index/index', { style: 'index.css', script: 'index.js'})
     }
+    getFruitsPage(req, res) {
+        res.render('./index/fruits', { style: 'products.css', script: 'products.js'})
+    }
+    getJuicesPage(req, res) {
+        res.render('./index/juices', { style: 'products.css', script: 'products.js'})
+    }
     getAboutPage(req, res) {
         res.render('./index/about', { style: 'about.css'})
     }
