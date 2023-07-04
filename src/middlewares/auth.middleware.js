@@ -14,7 +14,10 @@ class AuthMiddleware {
             next();
         }
         catch (e) {
-            this.logout(req, res, next);
+            req.session.destroy();
+            res.clearCookie("token");
+            res.clearCookie();
+            res.redirect('/');
         }
     }
     staffRequired(req, res, next) {
@@ -23,10 +26,10 @@ class AuthMiddleware {
                 next();
             }
             else {
-                res.sendStatus(404);
+                res.status(404).render('404', { layout: 'blank' });
             }
         } catch (e) {
-            res.sendStatus(404);
+            res.status(404).render('404', { layout: 'blank' });
         }
 
     }

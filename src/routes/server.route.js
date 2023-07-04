@@ -11,7 +11,7 @@ module.exports = function (app) {
     app.use('/', route.productsRoute);
     app.use('/', route.authRoute);
     app.use('/', route.indexRoute);
-    app.use('/', route.cartRoute);
+    app.use('/', AuthMiddleware.loginRequired, route.cartRoute);
 
     app.use((req, res, next) => {
         res.status(404).render('404', { layout: 'blank' });
