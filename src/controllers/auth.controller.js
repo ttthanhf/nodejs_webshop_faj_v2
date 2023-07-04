@@ -38,27 +38,6 @@ class AuthController {
                 res.render('./index/login', { style: 'auth.css', layout: 'blank', error: 'Username or Password incorrect !' });
             }
         })
-        // userModel.getUserByUsernameAndPassword(username, password, result => {
-        //     if (result.length != 0) {
-        //         let userData = {
-        //             id: result[0].id,
-        //             username: result[0].username,
-        //             isStaff: result[0].role < 3,
-        //             isManager: result[0].role < 2,
-        //             isAdmin: result[0].role < 1,
-        //         }
-        //         const token = jwt.generateToken(userData);
-        //         res.cookie('token', token, {
-        //             httpOnly: true,
-        //             sameSite: true
-        //         })
-        //         req.session.user = userData
-        //         res.redirect('/');
-        //     }
-        //     else {
-        //         res.render('./index/login', { style: 'auth.css', layout: 'blank', error: 'Username or Password incorrect !' })
-        //     }
-        // })
     }
     handleRegister(req, res) {
         let username = req.body.username;
