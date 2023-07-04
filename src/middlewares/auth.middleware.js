@@ -17,7 +17,7 @@ class AuthMiddleware {
             req.session.destroy();
             res.clearCookie("token");
             res.clearCookie();
-            res.redirect('/');
+            res.redirect('/login');
         }
     }
     staffRequired(req, res, next) {
