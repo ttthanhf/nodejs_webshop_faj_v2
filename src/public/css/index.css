@@ -1,0 +1,49 @@
+.index-container .category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .index-container .category-container .category-item {
+    margin: 10vh;
+    margin-top: 25vh; }
+    .index-container .category-container .category-item .category-title {
+      text-align: center;
+      margin-bottom: 5vh; }
+      .index-container .category-container .category-item .category-title:hover {
+        text-decoration: underline; }
+      .index-container .category-container .category-item .category-title a {
+        font-size: 4vh;
+        font-weight: bold; }
+    .index-container .category-container .category-item .list-item {
+      display: flex; }
+      .index-container .category-container .category-item .list-item .item {
+        margin-right: 2.5vw;
+        border-radius: 2px;
+        border: 0.1px solid #e7e7e7;
+        width: 12vw;
+        height: 35vh;
+        text-align: center;
+        box-shadow: rgba(119, 123, 128, 0.107) 0px 8px 24px; }
+        .index-container .category-container .category-item .list-item .item:hover {
+          box-shadow: rgba(70, 70, 78, 0.2) 0px 7px 29px 0px; }
+        .index-container .category-container .category-item .list-item .item img {
+          width: 8vw;
+          height: 15vh;
+          object-fit: contain;
+          margin: 10px 0; }
+        .index-container .category-container .category-item .list-item .item .title {
+          font-size: 3vh;
+          font-weight: bold;
+          margin: 1vh 0; }
+        .index-container .category-container .category-item .list-item .item .price {
+          font-size: 3vh;
+          margin: 1vh 0; }
+        .index-container .category-container .category-item .list-item .item .option {
+          border: 0.1px solid black;
+          width: 7vw;
+          height: 4vh;
+          font-size: 3vh;
+          background-color: white;
+          border-radius: 10px; }
+          .index-container .category-container .category-item .list-item .item .option:hover {
+            color: green;
+            cursor: pointer; }

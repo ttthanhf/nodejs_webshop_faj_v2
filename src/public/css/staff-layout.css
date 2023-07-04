@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  user-select: none; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.container {
+  display: grid;
+  grid-template-areas: 'menu headerTop' 'menu main' 'menu main';
+  grid-template-columns: 10vw auto;
+  grid-template-rows: 7vh auto; }
+  .container .menu {
+    grid-area: menu;
+    background-color: #dddddd;
+    overflow-y: auto;
+    height: 100vh; }
+    .container .menu .brand {
+      text-align: center; }
+    .container .menu .nav-container .nav-item {
+      margin: 5px;
+      padding: 2vh 0; }
+      .container .menu .nav-container .nav-item .title {
+        display: block;
+        cursor: pointer;
+        padding: 0 5px;
+        font-weight: bold;
+        font-size: 1.5vw; }
+      .container .menu .nav-container .nav-item .content {
+        display: none;
+        padding: 0 15px; }
+        .container .menu .nav-container .nav-item .content a {
+          display: block;
+          margin: 2vh 0;
+          font-size: 1.5vw; }
+          .container .menu .nav-container .nav-item .content a:hover {
+            color: #a3a3a3; }
+      .container .menu .nav-container .nav-item .open {
+        display: block; }
+      .container .menu .nav-container .nav-item:hover {
+        background-color: #ffffff;
+        border-radius: 5px; }
+    .container .menu .nav-container .bottom {
+      position: absolute;
+      bottom: 0; }
+      .container .menu .nav-container .bottom:hover {
+        padding-right: 1vw; }
+  .container .header {
+    padding: 5px;
+    grid-area: headerTop;
+    box-shadow: rgba(0, 0, 0, 0.107) 0px 8px 24px;
+    font-size: 1.5vw; }
+    .container .header .left {
+      float: left;
+      font-weight: bold; }
+    .container .header .right {
+      float: right;
+      margin-right: 1vw; }
+  .container .main {
+    grid-area: main;
+    padding: 15px; }

@@ -1,0 +1,41 @@
+{
+  "name": "project_nodejs_webshop_faj_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon ./test/test.js",
+    "start": "nodemon src/server.js",
+    "scss-main": "node-sass --watch src/resources/scss/layouts/main.scss src/public/css/main.css",
+    "scss-index": "node-sass --watch src/resources/scss/index/index.scss src/public/css/index.css",
+    "scss-products": "node-sass --watch src/resources/scss/index/products.scss src/public/css/products.css",
+    "scss-auth": "node-sass --watch src/resources/scss/index/auth.scss src/public/css/auth.css",
+    "scss-contact": "node-sass --watch src/resources/scss/index/contact.scss src/public/css/contact.css",
+    "scss-about": "node-sass --watch src/resources/scss/index/about.scss src/public/css/about.css",
+    "scss-staff-layout": "node-sass --watch src/resources/scss/layouts/staff-layout.scss src/public/css/staff-layout.css",
+    "scss-staff-products-cur": "node-sass --watch src/resources/scss/staff/products-cur.scss src/public/css/staff-products-cur.css",
+    "scss-staff-products-list": "node-sass --watch src/resources/scss/staff/products-list.scss src/public/css/staff-products-list.css",
+    "scss-all": "npm-run-all -p scss-main scss-index scss-products scss-auth scss-contact scss-about scss-staff-layout scss-staff-products-cur scss-staff-products-list",
+    "dev": "npm-run-all -p scss-all start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.4",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.3.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "passport": "^0.6.0"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5"
+  }
+}

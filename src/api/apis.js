@@ -1,0 +1,1 @@
+exports.productsAPI = require('./products.api.js');

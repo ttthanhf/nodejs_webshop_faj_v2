@@ -1,0 +1,132 @@
+/*node-sass --watch src/resources/scss/main.scss src/public/css/main.css*/
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Abril Fatface";
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.main-container {
+    .top-header {
+        padding: 2vh 0;
+        padding-right: 20px;
+        background-color: rgb(232, 232, 232);
+
+        .title-brand {
+            font-size: 3vh;
+            font-weight: bold;
+            margin-left: 15px;
+            float: left;
+
+            a {
+                color: rgb(73, 73, 73);
+            }
+        }
+
+        .logReg {
+            font-size: 2.5vh;
+            display: flex;
+            justify-content: right;
+
+            a {
+                padding-left: 1vw;
+            }
+        }
+
+    }
+
+    .navbar-collapse {
+        @include flexcenter;
+
+        .navbar-nav {
+            margin: 2vh 0;
+        }
+
+        ul {
+            width: 55vw;
+            height: 7vh;
+
+            border: 0.1px solid rgb(218, 218, 218);
+            box-shadow: rgba(86, 89, 92, 0.107) 0px 8px 24px;
+            border-radius: 10px;
+
+            @include flexcenter;
+
+            li {
+                list-style: none;
+                margin-right: 5vw;
+
+                a {
+                    font-size: 2vw;
+                    &:hover {
+                        color: rgb(125, 125, 125);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #d9d9d9;
+    padding: 30px 0;
+
+    .footer-wrapper {
+        margin: 0 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .footer-section {
+            flex-basis: calc(100%/4);
+
+            h3 {
+                font-size: 4vh;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 3vh;
+                color: #7a7a7a;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin-bottom: 5px;
+
+                    a {
+                        font-size: 3vh;
+                        color: #666;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #e4e4e4 inset;
+}

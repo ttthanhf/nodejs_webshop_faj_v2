@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'menu headerTop'
+        'menu main'
+        'menu main';
+    grid-template-columns: 10vw auto;
+    grid-template-rows: 7vh auto;
+
+    .menu {
+        grid-area: menu;
+        background-color: #dddddd;
+        overflow-y: auto;
+        height: 100vh;
+
+        .brand {
+            text-align: center;
+        }
+
+        .nav-container {
+            .nav-item {
+                margin: 5px;
+                padding: 2vh 0;
+
+                .title {
+                    display: block;
+                    cursor: pointer;
+                    padding: 0 5px;
+                    font-weight: bold;
+                    font-size: 1.5vw;
+                }
+
+                .content {
+                    display: none;
+                    padding: 0 15px;
+
+                    a {
+                        display: block;
+                        margin: 2vh 0;
+                        font-size: 1.5vw;
+
+                        &:hover {
+                            color: #a3a3a3;
+                        }
+                    }
+                }
+
+                .open {
+                    display: block;
+                }
+
+                &:hover {
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                }
+            }
+
+            .bottom {
+                position: absolute;
+                bottom: 0;
+
+                &:hover {
+                    padding-right: 1vw;
+                }
+            }
+        }
+    }
+
+    .header {
+        padding: 5px;
+        grid-area: headerTop;
+        box-shadow: rgba(0, 0, 0, 0.107) 0px 8px 24px;
+        font-size: 1.5vw;
+
+        .left {
+            float: left;
+            font-weight: bold;
+        }
+
+        .right {
+            float: right;
+            margin-right: 1vw;
+        }
+    }
+
+    .main {
+        grid-area: main;
+        padding: 15px;
+    }
+}

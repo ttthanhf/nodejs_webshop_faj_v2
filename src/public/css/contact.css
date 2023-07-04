@@ -1,0 +1,35 @@
+.title {
+  margin-top: 5vh;
+  text-align: center;
+  font-size: 6vh;
+  font-weight: bold; }
+
+.description {
+  text-align: center;
+  font-size: 5vh;
+  color: #868585;
+  margin-top: 5vh; }
+
+.content-container {
+  margin-bottom: 30vh; }
+  .content-container .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh; }
+    .content-container .content .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 8vh 0;
+      margin-left: 7vw;
+      padding: 0 2vw; }
+      .content-container .content .item object {
+        width: 7vh; }
+      .content-container .content .item .title {
+        margin: 10px 0;
+        font-size: 3vh;
+        color: #959595;
+        font-weight: bold; }
+      .content-container .content .item .detail {
+        font-size: 5vh; }

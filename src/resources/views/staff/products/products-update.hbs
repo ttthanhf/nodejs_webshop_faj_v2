@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="form">
+        <form>
+            <fieldset>
+                <legend>Update Products</legend><br><br>
+                <div class="wrap-container">
+                    <div class="wrap">
+                        <label for="id">Id products: *</label><br>
+                        <input type="text" placeholder="id" name="id" id="id"><br>
+                        <label for="title">Title products: </label><br>
+                        <input type="text" placeholder="title" name="title" id="title"><br>
+                        <label for="price">Price products: </label><br>
+                        <input type="text" placeholder="price" name="price" id="price"><br>
+                        <label for="price">Sale price products: </label><br>
+                        <input type="text" placeholder="You can leave nothing here" name="saleprice"
+                            id="saleprice"><br><br>
+                        <label for="topseller">Top seller</label><br>
+                        <input type="checkbox" name="topseller" id="topseller"><br><br><br><br>
+
+                    </div>
+                    <div class="wrap">
+                        <label for="quantity">Quantity products: </label><br>
+                        <input type="text" placeholder="quantity" name="quantity" id="quantity"><br>
+                        <label for="category">Category products: </label>
+                        <select id="category" name="category">
+                            <option value="" selected disabled hidden>Choose here</option>
+                            <option value="juice">Juice</option>
+                            <option value="fruit">Fruit</option>
+                        </select><br>
+                        <label for="imgInput">Image products: </label>
+                        <input type="text" placeholder="Name image" name="nameImg" id="nameImg">
+                        <input type="file" accept="image/*" id="imgInput" name="image">
+                        <img id="yourImage" src="#" style="height: 20vh;" />
+                    </div>
+                </div>
+                <input type="submit" value="Submit">
+                <span class="status">
+                    <span class="success" style="color: green;"></span>
+                </span>
+            </fieldset>
+        </form>
+    </div>
+</div>

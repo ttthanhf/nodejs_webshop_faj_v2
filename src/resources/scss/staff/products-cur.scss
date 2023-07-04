@@ -1,0 +1,26 @@
+#id, #title, #price, #quantity, #category, #imgInput {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+input[type="text"] {
+    padding: 1vh;
+}
+label {
+    font-size: 2vh;
+}
+.container {
+    .wrap-container {
+        display: flex;
+        .wrap {
+            margin-right: 6vw;
+        }
+    }
+}
+input[type="submit"] {
+    padding: 5px 2vw;
+    border-radius: 5px;
+}
+legend {
+    font-size: 5vh;
+    font-weight: bold;
+}

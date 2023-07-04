@@ -1,0 +1,18 @@
+<div class="container">
+    <a href="/">FAJ - Fruit And Juice</a>
+    <div class="item">
+        <form method="POST">
+            <span class="title">Login</span><br><br><br>
+            <input type="text" class="text-input" placeholder="Username" name="username"><br>
+            <input type="password" class="text-input" placeholder="Password" name="password"><br>
+            {{#if error}}
+            <span style="color: red;">{{error}}</span><br>
+            {{/if}}
+            {{#if sucess}}
+            <span style="color: green;">{{success}}</span><br>
+            {{/if}}
+            <input type="submit" value="Sign in" id="btn"><br><br><br>
+            <a href="/register">Don't have account ? Sign up</a>
+        </form>
+    </div>
+</div>

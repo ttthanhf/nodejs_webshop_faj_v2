@@ -1,0 +1,85 @@
+/*node-sass --watch src/resources/scss/main.scss src/public/css/main.css*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Abril Fatface"; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.main-container .top-header {
+  padding: 2vh 0;
+  padding-right: 20px;
+  background-color: #e8e8e8; }
+  .main-container .top-header .title-brand {
+    font-size: 3vh;
+    font-weight: bold;
+    margin-left: 15px;
+    float: left; }
+    .main-container .top-header .title-brand a {
+      color: #494949; }
+  .main-container .top-header .logReg {
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: right; }
+    .main-container .top-header .logReg a {
+      padding-left: 1vw; }
+
+.main-container .navbar-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .main-container .navbar-collapse .navbar-nav {
+    margin: 2vh 0; }
+  .main-container .navbar-collapse ul {
+    width: 55vw;
+    height: 7vh;
+    border: 0.1px solid #dadada;
+    box-shadow: rgba(86, 89, 92, 0.107) 0px 8px 24px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main-container .navbar-collapse ul li {
+      list-style: none;
+      margin-right: 5vw; }
+      .main-container .navbar-collapse ul li a {
+        font-size: 2vw; }
+        .main-container .navbar-collapse ul li a:hover {
+          color: #7d7d7d;
+          text-decoration: underline; }
+
+footer {
+  background-color: #d9d9d9;
+  padding: 30px 0; }
+  footer .footer-wrapper {
+    margin: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    footer .footer-wrapper .footer-section {
+      flex-basis: calc(100%/4); }
+      footer .footer-wrapper .footer-section h3 {
+        font-size: 4vh;
+        margin-bottom: 10px; }
+      footer .footer-wrapper .footer-section p {
+        font-size: 3vh;
+        color: #7a7a7a; }
+      footer .footer-wrapper .footer-section ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        footer .footer-wrapper .footer-section ul li {
+          margin-bottom: 5px; }
+          footer .footer-wrapper .footer-section ul li a {
+            font-size: 3vh;
+            color: #666;
+            text-decoration: none; }
+            footer .footer-wrapper .footer-section ul li a:hover {
+              color: #333; }
+
+hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #e4e4e4 inset; }

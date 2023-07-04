@@ -1,0 +1,49 @@
+
+.container {
+    margin-top: 18vh;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    a {
+        margin: 8vh 0;
+        color: black;
+        text-decoration: none;
+        font-size: 5vh;
+    }
+    .item {
+        width: 25vw;
+        border: 2px solid black;
+        text-align: center;
+        padding: 8vh 0;
+        .title {
+            font-size: 5vh;
+            font-weight: bold;
+        }
+        .text-input {
+            width: 15vw;
+            height: 4vh;
+            margin: 2vh 0;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 1vh 1vw;
+            font-size: 2vh;
+        }
+        #btn {
+            margin: 2vh 0;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 1vh 3vw;
+            background-color: rgb(248, 248, 248);
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(241, 241, 241);
+            }
+        }
+        a {
+            font-size: 3vh;
+        }
+        
+    }
+}

@@ -1,0 +1,45 @@
+.title {
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 6vh;
+    font-weight: bold;
+}
+.description {
+    text-align: center;
+    font-size: 5vh;
+    color: rgb(134, 133, 133);
+    margin-top: 5vh;
+}
+.content-container {
+    margin-bottom: 30vh;
+    .content {
+        display: flex;
+        justify-content: center;
+        margin-top: 2vh;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 8vh 0;
+            margin-left: 7vw;
+            padding: 0 2vw;
+
+            object {
+                width: 7vh;
+            }
+
+            .title {
+                margin: 10px 0;
+                font-size: 3vh;
+                color: rgb(149, 149, 149);
+                font-weight: bold;
+            }
+
+            .detail {
+                font-size: 5vh;
+            }
+        }
+    }
+}

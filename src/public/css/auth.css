@@ -1,0 +1,39 @@
+.container {
+  margin-top: 18vh;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .container a {
+    margin: 8vh 0;
+    color: black;
+    text-decoration: none;
+    font-size: 5vh; }
+  .container .item {
+    width: 25vw;
+    border: 2px solid black;
+    text-align: center;
+    padding: 8vh 0; }
+    .container .item .title {
+      font-size: 5vh;
+      font-weight: bold; }
+    .container .item .text-input {
+      width: 15vw;
+      height: 4vh;
+      margin: 2vh 0;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 1vh 1vw;
+      font-size: 2vh; }
+    .container .item #btn {
+      margin: 2vh 0;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 1vh 3vw;
+      background-color: #f8f8f8; }
+      .container .item #btn:hover {
+        cursor: pointer;
+        background-color: #f1f1f1; }
+    .container .item a {
+      font-size: 3vh; }

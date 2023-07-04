@@ -1,0 +1,104 @@
+body {
+    overflow-x: hidden;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+
+    input {
+        margin: 0 5px;
+        width: 30vw;
+        height: 3vh;
+        border: 1px solid black;
+    }
+
+    i {
+        font-size: 3vh;
+        cursor: pointer;
+    }
+}
+
+.products-container {
+
+    .category-container {
+
+        .category-item {
+            margin: 5vh 0;
+
+            .category-title {
+                text-align: center;
+                margin-bottom: 5vh;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                a {
+                    font-size: 4vh;
+                    font-weight: bold;
+                }
+            }
+
+            .list-item {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100vw;
+
+                .empty-item {
+                    font-size: 10vh;
+                    color: rgb(189, 189, 189);
+                    margin-bottom: 30vh;
+                }
+
+                .item {
+                    margin-right: 2.5vw;
+                    margin-bottom: 5vh;
+                    border-radius: 2px;
+                    border: 0.1px solid rgb(231, 231, 231);
+                    width: 12vw;
+                    height: 35vh;
+                    text-align: center;
+                    box-shadow: rgba(119, 123, 128, 0.107) 0px 8px 24px;
+
+                    &:hover {
+                        box-shadow: rgba(70, 70, 78, 0.2) 0px 7px 29px 0px;
+                    }
+
+                    img {
+                        width: 8vw;
+                        height: 15vh;
+                        object-fit: contain;
+                        margin: 10px 0;
+                    }
+
+                    .title {
+                        font-size: 3vh;
+                        font-weight: bold;
+                        margin: 1vh 0;
+                    }
+
+                    .price {
+                        font-size: 3vh;
+                        margin: 1vh 0;
+                    }
+
+                    .option {
+                        border: 0.1px solid black;
+                        width: 7vw;
+                        height: 4vh;
+                        font-size: 3vh;
+                        background-color: white;
+                        border-radius: 10px;
+
+                        &:hover {
+                            color: green;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
