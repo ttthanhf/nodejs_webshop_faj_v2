@@ -4,5 +4,6 @@ exports.apiRoute = require('./api.route.js');
 exports.staffRoute = require('./staff.route.js');
 exports.serverRoute = require("./server.route.js");
 exports.cartRoute = require("./cart.route.js");
+exports.userRoute = require("./user.route.js");
 
 

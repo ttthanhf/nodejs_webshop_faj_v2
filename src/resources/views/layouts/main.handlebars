@@ -23,12 +23,11 @@
                 <div class="logReg">
 
                     <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a href="/notication"><i class="fa-solid fa-bell"></i></a>
                     {{#if user}}
                     {{#if user.isStaff}}
                     <a href="/staff"><i class="fa-solid fa-clipboard-user"></i></a>
                     {{/if}}
-                    <a href="/setting">Hello, {{user.username}}</a>
+                    <a href="/user">Hello, {{user.username}}</a>
                     <a href="/logout">Logout</a>
                     {{else}}
                     <a href="/login"><i class="fa-solid fa-user"></i></a>

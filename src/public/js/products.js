@@ -15,7 +15,7 @@ function renderProductsTable(products, status) {
                 <div class="price">
                     $${item.price}
                 </div>
-                <button class="option"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href=\"cart/addtocart/${item.id}\"><button class="option"><i class="fa-solid fa-cart-shopping"></i></button></a>
             </div>`
         })
     }
