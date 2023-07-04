@@ -2,7 +2,7 @@ const { query } = require('express');
 
 const mysql = require('../configs/configs.js').mysqlConfig;
 
-const generateRandomNumber = require('../utils/generateId.js');
+const generateRandomNumber = require('../utils/generateId.js').generateRandomNumber(6);
 
 class UserModel {
     getUserByUsernameAndPassword(username, password, callback) {
@@ -17,11 +17,9 @@ class UserModel {
             callback(result);
         })
     }
-    createUser(username, password) {
+    createUser(username, password, callback) {
         const sql = 'INSERT INTO users (id, username, password, role) VALUES (?, ?, ?, ?)'
-        mysql.query(sql, [username], (err, result) => {
-            callback(result);
-        })
+        mysql.query(sql, [generateRandomNumber, username, password, 3])
     }
 }
 

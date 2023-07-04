@@ -17,8 +17,8 @@ class AuthController {
             res.render('./index/login', { style: 'auth.css', layout: 'blank', error: 'Username or Password empty !' });
             return;
         }
-        userModel.getUserByUsernameAndPassword(username, password, result => {
-            if (result.length != 0) {
+        userModel.getUserByUsername(username, result => {
+            if (result.length != 0 && bcrypt.verifyHash(password, result[0].password)) {
                 let userData = {
                     id: result[0].id,
                     username: result[0].username,
@@ -35,16 +35,37 @@ class AuthController {
                 res.redirect('/');
             }
             else {
-                res.render('./index/login', { style: 'auth.css', layout: 'blank', error: 'Username or Password incorrect !' })
+                res.render('./index/login', { style: 'auth.css', layout: 'blank', error: 'Username or Password incorrect !' });
             }
         })
+        // userModel.getUserByUsernameAndPassword(username, password, result => {
+        //     if (result.length != 0) {
+        //         let userData = {
+        //             id: result[0].id,
+        //             username: result[0].username,
+        //             isStaff: result[0].role < 3,
+        //             isManager: result[0].role < 2,
+        //             isAdmin: result[0].role < 1,
+        //         }
+        //         const token = jwt.generateToken(userData);
+        //         res.cookie('token', token, {
+        //             httpOnly: true,
+        //             sameSite: true
+        //         })
+        //         req.session.user = userData
+        //         res.redirect('/');
+        //     }
+        //     else {
+        //         res.render('./index/login', { style: 'auth.css', layout: 'blank', error: 'Username or Password incorrect !' })
+        //     }
+        // })
     }
     handleRegister(req, res) {
         let username = req.body.username;
         let password = req.body.password;
         let retypePassword = req.body.retypePassword;
         if (!password || !username || !retypePassword) {
-            res.render('./index/login', { style: 'auth.css', layout: 'blank', error: 'Username or Password empty !' });
+            res.render('./index/register', { style: 'auth.css', layout: 'blank', error: 'Username or Password empty !' });
             return;
         }
         if (password != retypePassword) {
@@ -52,10 +73,11 @@ class AuthController {
             return;
         }
         userModel.getUserByUsername(username, result => {
-            if (result.length != 0) {
+            if (result.length == 0) {
                 let hashPassword = bcrypt.generateHash(password);
+                console.log(hashPassword)
                 userModel.createUser(username, hashPassword);
-                res.render('./index/login', { style: 'auth.css', layout: 'blank', sucess: 'Register success !' })
+                res.render('./index/register', { style: 'auth.css', layout: 'blank', sucess: 'Register succes ! Login now' })
             }
             else {
                 res.render('./index/register', { style: 'auth.css', layout: 'blank', error: 'Username exist !' })
