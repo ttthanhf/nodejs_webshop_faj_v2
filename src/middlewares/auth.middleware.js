@@ -18,12 +18,17 @@ class AuthMiddleware {
         }
     }
     staffRequired(req, res, next) {
-        if (req.session.user.role < 3) {
-            next();
+        try {
+            if (req.session.user.isStaff) {
+                next();
+            }
+            else {
+                res.sendStatus(404);
+            }
+        } catch (e) {
+            res.sendStatus(404);
         }
-        else {
-            res.send(404);
-        }
+
     }
     loginIn(req, res, next) {
         try {

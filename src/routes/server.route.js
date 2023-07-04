@@ -5,7 +5,7 @@ const AuthMiddleware = require('../middlewares/middlewares.js').AuthMiddleware;
 module.exports = function (app) {
     app.use(AuthMiddleware.loginIn);
 
-    app.use('/staff', route.staffRoute);
+    app.use('/staff', AuthMiddleware.staffRequired, route.staffRoute);
     app.use('/api', route.apiRoute);
 
     app.use('/', route.productsRoute);
