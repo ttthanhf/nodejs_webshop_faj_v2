@@ -2,7 +2,7 @@ const { query } = require('express');
 
 const mysql = require('../configs/configs.js').mysqlConfig;
 
-const generateRandomNumber = require('../utils/generateId.js').generateRandomNumber(6);
+const generateRandomNumber = require('../utils/generateId.js');
 
 class UserModel {
     getUserByUsernameAndPassword(username, password, callback) {
