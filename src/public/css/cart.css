@@ -1,0 +1,77 @@
+body {
+  user-select: none; }
+
+.cart-container {
+  display: grid;
+  grid-template-areas: 'title title' 'cart detail' 'cart detail';
+  grid-template-columns: 60vw auto;
+  grid-template-rows: 7vh auto;
+  height: 80vh; }
+  .cart-container .title {
+    width: 100vw;
+    grid-area: title;
+    text-align: center; }
+    .cart-container .title span {
+      font-size: 4vh;
+      font-weight: bold; }
+  .cart-container .table {
+    grid-area: cart; }
+    .cart-container .table ::-webkit-scrollbar {
+      display: none; }
+    .cart-container .table table {
+      user-select: text;
+      display: block;
+      height: 70vh;
+      overflow-y: scroll;
+      overflow-x: hidden; }
+    .cart-container .table table td {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 10px; }
+      .cart-container .table table td img {
+        height: 4vh; }
+      .cart-container .table table td .valueBtn {
+        user-select: none;
+        height: 5vh;
+        width: 2vw;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        cursor: pointer; }
+      .cart-container .table table td .decrease {
+        margin-right: 2vw; }
+      .cart-container .table table td .increase {
+        margin-left: 2vw; }
+      .cart-container .table table td .removeBtn {
+        height: 3vh;
+        width: 10vw;
+        background-color: white;
+        border: 1px solid black;
+        cursor: pointer; }
+    .cart-container .table table tr:nth-child(even) {
+      background-color: #f2f2f2; }
+    .cart-container .table table tr:hover {
+      background-color: #ddd; }
+    .cart-container .table table th {
+      position: sticky;
+      top: 0;
+      background-color: #535353;
+      color: white;
+      padding: 8px;
+      padding-right: 6vw; }
+  .cart-container .detail {
+    grid-area: detail;
+    width: 15vw;
+    height: 50vh; }
+    .cart-container .detail form fieldset {
+      margin-top: 5vh; }
+      .cart-container .detail form fieldset legend {
+        font-size: 20px;
+        font-weight: bold; }
+      .cart-container .detail form fieldset #submitBtn {
+        color: white;
+        padding: 5px 100px;
+        border: none;
+        background-color: black;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer; }

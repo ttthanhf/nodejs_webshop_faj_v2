@@ -1,9 +1,10 @@
 const searchType = window.location.pathname.slice(1);
 const apiUrl = '/api/products/' + searchType;
 const categoryId = "category-" + searchType;
-const orginalHTML = document.querySelector(`#${categoryId} .list-item`).innerHTML;
-
+const orginalHTML = '';
+// const orginalHTML = document.querySelector(`#${categoryId} .list-item`).innerHTML;
 function renderProductsTable(products, status) {
+    document.querySelector(`#${categoryId} .list-item`).innerHTML = ''
     let htmls = orginalHTML;
     if (products.length != 0) {
         products.forEach(item => {
@@ -15,7 +16,7 @@ function renderProductsTable(products, status) {
                 <div class="price">
                     $${item.price}
                 </div>
-                <a href=\"cart/addtocart/${item.id}\"><button class="option"><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <button class="option" id="${item.id}" onclick='addToCart(this)'><i class="fa-solid fa-cart-shopping"></i></button>
             </div>`
         })
     }
@@ -54,6 +55,19 @@ document.querySelector('#search').addEventListener('input', searchProducts);
 
 getProductsList(apiUrl, false);
 
+function renderTotalCart() {
+    fetch('/cart/get').then(response => response.json()).then(data => {
+        document.querySelector('#totalCart').innerHTML = data.totalProducts.totalProducts
+    })
+}
 
+function addToCart(e) {
+    fetch('/cart/add/' + e.id, {
+        method: "POST"
+    }).then(() => {
+        e.innerHTML = '<i class="fa-solid fa-check" style="color: #3ed063;"></i>'
+        renderTotalCart()
+    });
+}
 
 

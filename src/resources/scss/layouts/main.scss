@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Abril Fatface";
+    overflow-x: hidden;
 }
 
 a {
@@ -42,6 +43,22 @@ a {
             a {
                 padding-left: 1vw;
             }
+
+            .displayCart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+                position: relative;
+                top: -1vh;
+                left: 0;
+                background-color: red;
+                border-radius: 100%;
+                font-size: 1vh;
+                width: 1.5vh;
+                height: 1.5vh;
+                color: white;
+            }
         }
 
     }
@@ -69,6 +86,7 @@ a {
 
                 a {
                     font-size: 2vw;
+
                     &:hover {
                         color: rgb(125, 125, 125);
                         text-decoration: underline;

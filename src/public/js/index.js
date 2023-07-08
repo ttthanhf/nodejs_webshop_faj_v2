@@ -11,7 +11,7 @@ function getProducts(type, categoryId) {
                         <div class="price">
                             $${item.price}
                         </div>
-                        <button class="option"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <button class="option" id="${item.id}" onclick='addToCart(this)'><i class="fa-solid fa-cart-shopping"></i></button>
                     </div>`
             })
             document.querySelector(`#${categoryId} .list-item`).innerHTML = htmls
@@ -23,4 +23,18 @@ getProducts('topseller', 'category-topseller');
 getProducts('fruits', 'category-fruits');
 getProducts('juices', 'category-juices');
 
+function renderTotalCart() {
+    fetch('/cart/get').then(response => response.json()).then(data => {
+        document.querySelector('#totalCart').innerHTML = data.totalProducts.totalProducts
+    })
+}
 
+function addToCart(e) {
+    fetch('/cart/add/' + e.id, {
+        method: "POST"
+    }).then(() => {
+        e.innerHTML = '<i class="fa-solid fa-check" style="color: #3ed063;"></i>'
+        renderTotalCart()
+    });
+
+}

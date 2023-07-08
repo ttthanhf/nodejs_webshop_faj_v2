@@ -1,0 +1,121 @@
+body {
+    user-select: none;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-areas:
+        'title title'
+        'cart detail'
+        'cart detail';
+    grid-template-columns: 60vw auto;
+    grid-template-rows: 7vh auto;
+    height: 80vh;
+
+    .title {
+        width: 100vw;
+        grid-area: title;
+        text-align: center;
+
+        span {
+            font-size: 4vh;
+            font-weight: bold;
+        }
+    }
+
+    .table {
+        grid-area: cart;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        table {
+            user-select: text;
+            display: block;
+            height: 70vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        table td {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+
+            img {
+                height: 4vh;
+            }
+
+            .valueBtn {
+                user-select: none;
+                height: 5vh;
+                width: 2vw;
+                font-weight: bold;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .decrease {
+                margin-right: 2vw;
+            }
+
+            .increase {
+                margin-left: 2vw;
+            }
+
+            .removeBtn {
+                height: 3vh;
+                width: 10vw;
+                background-color: white;
+                border: 1px solid black;
+                cursor: pointer;
+            }
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+
+        table th {
+            position: sticky;
+            top: 0;
+            background-color: #535353;
+            color: white;
+            padding: 8px;
+            padding-right: 6vw;
+        }
+
+    }
+
+    .detail {
+        grid-area: detail;
+        width: 15vw;
+        height: 50vh;
+
+        form {
+            fieldset {
+                margin-top: 5vh;
+
+                legend {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                #submitBtn {
+                    color: white;
+                    padding: 5px 100px;
+                    border: none;
+                    background-color: black;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

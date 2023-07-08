@@ -15,7 +15,8 @@
     "scss-staff-layout": "node-sass --watch src/resources/scss/layouts/staff-layout.scss src/public/css/staff-layout.css",
     "scss-staff-products-cur": "node-sass --watch src/resources/scss/staff/products-cur.scss src/public/css/staff-products-cur.css",
     "scss-staff-products-list": "node-sass --watch src/resources/scss/staff/products-list.scss src/public/css/staff-products-list.css",
-    "scss-all": "npm-run-all -p scss-main scss-index scss-products scss-auth scss-contact scss-about scss-staff-layout scss-staff-products-cur scss-staff-products-list",
+    "scss-cart": "node-sass --watch src/resources/scss/index/cart.scss src/public/css/cart.css",
+    "scss-all": "npm-run-all -p scss-cart scss-main scss-index scss-products scss-auth scss-contact scss-about scss-staff-layout scss-staff-products-cur scss-staff-products-list",
     "dev": "npm-run-all -p scss-all start"
   },
   "author": "",

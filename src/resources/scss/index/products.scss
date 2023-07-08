@@ -20,6 +20,7 @@ body {
 }
 
 .products-container {
+    min-height: 80vh;
 
     .category-container {
 
@@ -45,6 +46,10 @@ body {
                 flex-wrap: wrap;
                 justify-content: center;
                 width: 100vw;
+
+                .space-void {
+                    margin: 50vh 0;
+                }
 
                 .empty-item {
                     font-size: 10vh;

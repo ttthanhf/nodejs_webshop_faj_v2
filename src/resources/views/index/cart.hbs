@@ -1,1 +1,35 @@
-<h1>CART</h1>
+<div class="cart-container">
+    <div class="title">
+        <span>Cart</span>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="detail">
+        <form action="POST">
+            <fieldset>
+                <legend>Order detail</legend><br>
+                <label for="">Coupon:</label>
+                <input type="text"><br><br>
+                <span>Subtotal: $<span id="subPrice"></span></span><br><br>
+                <span>Shipping: $10</span><br><br>
+                <span>Total: $<span id="totalPrice"></span></span><br><br><br>
+                <input type="submit" value="Checkout" id="submitBtn">
+            </fieldset>
+        </form>
+    </div>
+</div>
