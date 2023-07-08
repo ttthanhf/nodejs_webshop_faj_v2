@@ -23,18 +23,12 @@ getProducts('topseller', 'category-topseller');
 getProducts('fruits', 'category-fruits');
 getProducts('juices', 'category-juices');
 
-function renderTotalCart() {
-    fetch('/cart/get').then(response => response.json()).then(data => {
-        document.querySelector('#totalCart').innerHTML = data.totalProducts.totalProducts
-    })
-}
-
 function addToCart(e) {
     fetch('/cart/add/' + e.id, {
         method: "POST"
     }).then(() => {
+        renderTotalCart(true)
         e.innerHTML = '<i class="fa-solid fa-check" style="color: #3ed063;"></i>'
-        renderTotalCart()
     });
 
 }
