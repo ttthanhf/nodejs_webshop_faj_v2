@@ -28,8 +28,9 @@ body {
     .products-container .category-container .category-item .list-item {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      width: 100vw; }
+      justify-content: flex-start;
+      width: 100vw;
+      margin-left: 7vw; }
       .products-container .category-container .category-item .list-item .space-void {
         margin: 50vh 0; }
       .products-container .category-container .category-item .list-item .empty-item {

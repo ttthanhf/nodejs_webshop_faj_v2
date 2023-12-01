@@ -4,7 +4,7 @@ body {
 .cart-container {
   display: grid;
   grid-template-areas: 'title title' 'cart detail' 'cart detail';
-  grid-template-columns: 60vw auto;
+  grid-template-columns: 70vw auto;
   grid-template-rows: 7vh auto;
   height: 80vh; }
   .cart-container .title {
@@ -15,6 +15,7 @@ body {
       font-size: 4vh;
       font-weight: bold; }
   .cart-container .table {
+    margin-left: 10vw;
     grid-area: cart; }
     .cart-container .table ::-webkit-scrollbar {
       display: none; }

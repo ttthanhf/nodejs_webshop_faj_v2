@@ -7,6 +7,8 @@ route.get('/products/create', controller.staffController.getProductsCreatePage);
 route.get('/products/update', controller.staffController.getProductsUpdatePage);
 route.get('/products/remove', controller.staffController.getProductsRemovePage);
 
+route.get('/user/list', controller.staffController.getProductsRemovePage);
+
 route.get('/', controller.staffController.getPage);
 
 module.exports = route;

@@ -21,6 +21,12 @@ class UserModel {
             callback(result);
         })
     }
+    getAllUser() {
+        const sql = 'SELECT * FROM users'
+        mysql.query(sql, [id], (err, result) => {
+            callback(result);
+        })
+    }
     createUser(username, password, callback) {
         const generateRandomNumber = require('../utils/generateId.js').generateRandomNumber(6);
         const sql = 'INSERT INTO users (id, username, password, role) VALUES (?, ?, ?, ?)'

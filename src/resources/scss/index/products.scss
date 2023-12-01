@@ -44,8 +44,9 @@ body {
             .list-item {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: flex-start;
                 width: 100vw;
+                margin-left: 7vw;
 
                 .space-void {
                     margin: 50vh 0;

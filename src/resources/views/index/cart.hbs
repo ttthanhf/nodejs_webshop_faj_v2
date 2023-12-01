@@ -20,15 +20,16 @@
         </table>
     </div>
     <div class="detail">
-        <form action="POST">
+        <form method="GET">
             <fieldset>
                 <legend>Order detail</legend><br>
-                <label for="">Coupon:</label>
-                <input type="text"><br><br>
+                {{!-- <label for="">Coupon:</label>
+                <input type="text"><br><br> --}}
+                <span>Discount: $0</span><br><br>
                 <span>Subtotal: $<span id="subPrice"></span></span><br><br>
                 <span>Shipping: $10</span><br><br>
                 <span>Total: $<span id="totalPrice"></span></span><br><br><br>
-                <input type="submit" value="Checkout" id="submitBtn">
+                <a href="/cart/checkout" id="submitBtn">Checkout</a>
             </fieldset>
         </form>
     </div>

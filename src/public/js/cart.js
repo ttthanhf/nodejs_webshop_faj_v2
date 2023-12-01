@@ -10,7 +10,7 @@ function renderProductsTable(products) {
             <td><img src="/img/test.jpg"></td>
             <td>${item.title}</td>
             <td>$${item.price}</td>
-            <td><button id="${item.productId}-decrease-${item.quantity}" class="valueBtn decrease" onclick='setQuanity(this)'><</button>${item.quantity}<button id="${item.productId}-increase-${item.quantity}" class="valueBtn increase" onclick='setQuanity(this)'>></button></td>
+            <td><button id="${item.productId}-decrease-${item.quantity}" class="valueBtn decrease" onclick='setQuanity(this)'><</button><span>${item.quantity}</span><button id="${item.productId}-increase-${item.quantity}" class="valueBtn increase" onclick='setQuanity(this)'>></button></td>
             <td>$${item.price * item.quantity}</td>
             <td><button id="${item.productId}" onclick='remove(this)' class="removeBtn"><i class="fa-solid fa-trash"></i></button></td>
         </tr>`

@@ -1,0 +1,36 @@
+.checkout-container .title {
+  width: 100vw;
+  grid-area: title;
+  text-align: center; }
+  .checkout-container .title span {
+    font-size: 4vh;
+    font-weight: bold; }
+
+.checkout-container .main {
+  margin: 5vh 0px; }
+  .checkout-container .main form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .checkout-container .main form fieldset {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 0px; }
+      .checkout-container .main form fieldset input {
+        margin: 20px 0;
+        width: 20vw;
+        height: 3vh;
+        padding: 5px; }
+      .checkout-container .main form fieldset label {
+        font-size: 20px;
+        font-weight: bold; }
+      .checkout-container .main form fieldset button {
+        color: white;
+        padding: 5px 100px;
+        border: none;
+        background-color: black;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer; }

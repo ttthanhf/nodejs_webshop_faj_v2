@@ -35,6 +35,9 @@ class CartController {
         cartModel.deleteProducts(req.params.idProducts, req.session.user.id);
         res.end();
     }
+    checkout(req, res) {
+        res.render('./index/checkout', { style: 'checkout.css', script: 'checkout.js' })
+    }
 }
 
 module.exports = new CartController;
